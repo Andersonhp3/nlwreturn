@@ -15,6 +15,7 @@
   --brand-beige: hsl(39, 100%, 97%);
   --brand-ligth:  hsl(148, 23%, 89%);
   --bg-ligth: hsl(180, 14%, 97%);
+  --brand-dark: hsl(170, 100%, 14%);
 
   font-size: 62.5%;  /*1rem = 10px  */
 
@@ -94,6 +95,37 @@ section .content p {
   color: var(--paragraph);
 }
 
+.button {
+  background: var(--primarycolor);
+
+  border: none;
+  border-radius: 4rem;
+
+  margin-bottom: 6rem;
+
+  padding: 1.6rem 3.2rem;
+  width: fit-content;
+
+  
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  text-decoration: none;
+
+  transition: background 200ms;
+}
+
+.button:hover {
+  background-color: var(--brand-dark);
+}
+
 /* =========NAVIGATION============ */
 nav {
   display: flex;
@@ -159,31 +191,11 @@ nav button {
   margin-bottom: 3.4rem;
 }
 
-#home button {
-  background: var(--primarycolor);
-
-  border: none;
-  border-radius: 4rem;
-
-  margin-bottom: 6rem;
-
-  height: 6.2rem;
-  width: 26.3rem;
-
-  
-  color: white;
-  font-size: 1.4rem;
-  font-weight: 700;
-  text-transform: uppercase;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
-
+#home .button {
   margin-right: auto;
   margin-left: auto;
 }
+
 
 #home img {
   display: block;
@@ -357,4 +369,28 @@ body.menu-expanded button svg:nth-child(2) path {
 #about .content p {
   margin-top: 2.4rem;
   margin-bottom: 6rem;
+}
+
+/* =======ABOUT============ */
+
+#contact {
+  text-align: left;
+}
+
+#contact header {
+  margin-bottom: 3.2rem;
+}
+
+#contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  margin-bottom: 3.2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
 }
