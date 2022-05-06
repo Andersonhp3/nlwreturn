@@ -318,6 +318,12 @@ body.menu-expanded .menu {
   margin-bottom: 8rem;
 }
 
+.menu .button:hover {
+  background-color: var(--primarycolor);
+  color: white;
+  filter: brightness(1.4);
+}
+
 body.menu-expanded .logo,
 body.menu-expanded nav button {
   position: relative;
@@ -428,4 +434,24 @@ footer p {
 
 footer .social-links {
   justify-content: flex-start;
+}
+
+/* backToTopButton */
+
+#backToTopButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 2.5rem;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(100%);
+  transition: 200ms;
+}
+
+#backToTopButton.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
