@@ -14,13 +14,14 @@
   --paragraph: hsl(210, 9%, 31%);
 
   --brand-beige: hsl(39, 100%, 97%);
-  --brand-ligth:  hsl(calc(var(--hue) - 22), 23%, 89%);
-  --brand-ligth-2:  hsl(calc(var(--hue) + 10), 23%, 89%);
+  --brand-ligth: hsl(calc(var(--hue) - 22), 23%, 89%);
+  --brand-ligth-2: hsl(calc(var(--hue) + 10), 23%, 89%);
   --brand-dark: hsl(var(--hue), 100%, 14%);
-  
+
   --bg-ligth: hsl(180, 14%, 97%);
 
-  font-size: 62.5%;  /*1rem = 10px  */
+  font-size: 62.5%;
+  /*1rem = 10px  */
 
   --nav-heigth: 7.2rem
 }
@@ -70,7 +71,7 @@ section header h4 {
   line-height: 150%;
   letter-spacing: 0.08rem;
   color: var(--primarycolor);
-  
+
   text-transform: uppercase;
 
   margin-bottom: 1.6rem;
@@ -80,7 +81,7 @@ section header h2 {
   font-size: 3rem;
   line-height: 3.9rem;
   color: var(--headline);
-  
+
 }
 
 section header h1 {
@@ -109,7 +110,7 @@ section .content p {
   padding: 1.6rem 3.2rem;
   width: fit-content;
 
-  
+
   color: white;
   font-size: 1.4rem;
   font-weight: 700;
@@ -191,7 +192,7 @@ nav .close-menu {
 
 /* =========HOME============ */
 
-#home {  
+#home {
   padding-block: 0;
   padding-top: calc(4.1rem + var(--nav-heigth));
 }
@@ -246,7 +247,7 @@ nav .close-menu {
   gap: 6rem;
 }
 
-#home .stat h3{
+#home .stat h3 {
   font-size: 4.8rem;
   color: var(--headline);
   line-height: 130%;
@@ -254,7 +255,7 @@ nav .close-menu {
   margin-bottom: 0.4rem;
 }
 
-#home .stat p{
+#home .stat p {
   margin: 0;
   color: var(--primarycolor);
 }
@@ -266,7 +267,7 @@ body.menu-expanded {
   overflow: hidden;
 }
 
-body.menu-expanded > :not(nav) {
+body.menu-expanded> :not(nav) {
   visibility: hidden;
 }
 
@@ -378,7 +379,7 @@ body.menu-expanded button svg:nth-child(2) path {
 #services .card {
   padding: 2.4rem;
   text-align: left;
-  
+
   background: white;
   border: 0.1rem solid var(--brand-ligth);
 }
@@ -448,7 +449,7 @@ footer .logo svg {
   height: 3.1rem;
 }
 
-footer .logo path{
+footer .logo path {
   fill: white;
 }
 
@@ -486,7 +487,7 @@ footer .social-links {
 /* =======RESPONSIVO============ */
 
 @media (min-width: 102.4rem) {
-  
+
 
   /* =======GERAL============ */
   body {
@@ -500,6 +501,20 @@ footer .social-links {
 
   section {
     padding-block: 16rem;
+  }
+
+  serction h2 {
+    font-size: 4rem;
+    line-height: 5.2rem;
+  }
+
+
+  .col-a {
+    grid-area: A;
+  }
+
+  .col-b {
+    grid-area: B;
   }
 
   /* =======NAVIGATION============ */
@@ -628,27 +643,23 @@ footer .social-links {
   #home::before {
     height: calc(92% - var(--nav-heigth));
   }
+
   #home {
     padding-top: var(--nav-heigth);
   }
 
   #home .wrapper {
     grid-template-columns: 60.5rem 1fr;
-    grid-template-areas: 
-    'A B'
-    'C C';
+    grid-template-areas:
+      'A B'
+      'C C';
   }
 
   #home .col-a {
-    grid-area: A;
     text-align: left;
     align-self: center;
   }
-
-  #home .col-b {
-    grid-area: B;
-  }
-
+  
   #home h1 {
     font-size: 5.2rem;
   }
@@ -665,7 +676,7 @@ footer .social-links {
     gap: 0;
   }
 
-  #home .stats .stat + .stat {
+  #home .stats .stat+.stat {
     border-left: 1px solid var(--primarycolor);
   }
 
@@ -681,4 +692,41 @@ footer .social-links {
     width: 42rem;
   }
 
+  /* =====SERVICE============== */
+
+  #services h2 {
+    width: 47rem;
+    margin-inline: auto;
+  }
+
+  #services .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  #services .card {
+    width: 30%;
+    flex-grow: 1;
+  }
+
+  /* =====ABOUT============== */
+
+  #about .wrapper {
+    grid-template-columns: 48rem 1fr;
+    grid-template-areas: 'B A';
+    gap: 6.7rem;
+  }
+
+  #about .col-a {
+    align-self: center;
+  }
+
+  #about .content p {
+    margin-bottom: 0;
+  }
+
+  #about img {
+    width: 100%;
+  }
 }
