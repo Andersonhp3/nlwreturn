@@ -200,7 +200,7 @@ nav .close-menu {
 #home::before {
   content: "";
   width: 100%;
-  height: calc(80%+ var(--nav-heigth));
+  height: calc(120% + var(--nav-heigth));
   background-color: var(--brand-ligth);
   display: block;
 
@@ -486,7 +486,7 @@ footer .social-links {
 
 /* =======RESPONSIVO============ */
 
-@media (min-width: 102.4rem) {
+@media (min-width: 1024px) {
 
 
   /* =======GERAL============ */
@@ -642,7 +642,7 @@ footer .social-links {
 
   /* =====HOME============== */
   #home::before {
-    height: calc(92% - var(--nav-heigth));
+    height: calc(98% - var(--nav-heigth));
   }
 
   #home {
