@@ -642,7 +642,7 @@ footer .social-links {
 
   /* =====HOME============== */
   #home::before {
-    height: calc(98% - var(--nav-heigth));
+    height: calc(105% - var(--nav-heigth));
   }
 
   #home {
